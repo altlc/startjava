@@ -11,7 +11,7 @@ public class Variable {
 
 		System.out.println("cpuCores = " + cpuCores);
 		System.out.println("ramMb = " + ramMb);
-		System.out.println("soundSampleRateHz = " + soundSampleRateHZ);
+		System.out.println("soundSampleRateHz = " + soundSampleRateHz);
 		System.out.println("hddSizeB = " + hddSizeB);
 		System.out.println("cpuFreqGhz = " + cpuFreqGhz);
 		System.out.println("osDriveSizeGb = " + osDriveSizeGb);
