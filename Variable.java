@@ -1,25 +1,21 @@
-public class Variable {	
-    public static void main(String[] args) {
-		byte CPUCores = 8;
-		short RAMMegabytes = 8192;
-		int SaundSampleRateHZ = 48000;
-		long HDDSizeBytes = 696411309;
-		float CPUFreqGHZ = 3.2F;
-		double OSDriveSizeGB = 9.121932452;
-		char OSDrive = 'C';
-		boolean IsX86 = true;
+public class Variable {
+	public static void main(String[] args) {
+		byte cpuCores = 8;
+		short ramMB = 8192;
+		int  soundSampleRateHZ = 48000;
+		long hddSizeB = 696411309;
+		float cpuFreqGHZ = 3.2F;
+		double osDriveSizeGB = 9.121932452;
+		char osDrive = 'C';
+		boolean isX86 = true;
 
-		System.out.println("CPUCores = " + CPUCores);
-		System.out.println("RAMMegabytes = " + RAMMegabytes);
-		System.out.println("SaundSampleRateHZ = " + SaundSampleRateHZ);
-		System.out.println("HDDSizeBytes = " + HDDSizeBytes);
-		System.out.println("CPUFreqGHZ = " + CPUFreqGHZ);
-		System.out.println("OSDriveSizeGB = " + OSDriveSizeGB);
-		System.out.println("OSDrive = " + OSDrive);
-		System.out.println("IsX86 = " + IsX86);
+		System.out.println("cpuCores = " + cpuCores);
+		System.out.println("ramMB = " + ramMB);
+		System.out.println("soundSampleRateHZ = " + soundSampleRateHZ);
+		System.out.println("hddSizeB = " + hddSizeB);
+		System.out.println("cpuFreqGHZ = " + cpuFreqGHZ);
+		System.out.println("osDriveSizeGB = " + osDriveSizeGB);
+		System.out.println("osDrive = " + osDrive);
+		System.out.println("isX86 = " + isX86);
 	}
-
-
-
-
 }
