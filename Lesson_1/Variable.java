@@ -2,7 +2,7 @@ public class Variable {
 	public static void main(String[] args) {
 		byte cpuCores = 8;
 		short ramMb = 8192;
-		int  soundSampleRateHz = 48000;
+		int soundSampleRateHz = 48000;
 		long hddSizeB = 696411309;
 		float cpuFreqGhz = 3.2F;
 		double osDriveSizeGb = 9.121932452;

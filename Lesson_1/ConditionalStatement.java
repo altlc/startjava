@@ -3,7 +3,7 @@ public class ConditionalStatement {
 		short age = 33;
 		char gender = 'F';
 		float height = 1.70f;
-		char nameFirstChar = 'G';
+		char firstNameLetter = 'G';
 
 		if (age > 20) {
 			System.out.println("Age > 20");
@@ -19,15 +19,15 @@ public class ConditionalStatement {
 
 		if (height < 1.80){
 			System.out.println("height < 1.80");
-		}else{
+		} else {
 			System.out.println("height > 1.80");
 		}
 
-		if(nameFirstChar == 'M'){
+		if(firstNameLetter == 'M'){
 			System.out.println("First char M");
-		}else if (nameFirstChar == 'I') {
+		} else if (firstNameLetter == 'I') {
 			System.out.println("First char I");
-		}else{
+		} else {
 			System.out.println("Other first char");
 		}
 	}
