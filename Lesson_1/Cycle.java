@@ -23,6 +23,5 @@ public class Cycle {
 			k++;
 		} while(k <= 20);
 		System.out.println("Sum: " + sum);
-
 	}
 }
