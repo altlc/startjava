@@ -10,7 +10,7 @@ public class GuessNumber {
 				if (userNumber - increment > 0) {
 					userNumber -= increment;
 				}
-				increment = (byte)(increment/2);
+				if (increment > 1) increment = (byte)(increment/2);
 			}
 
 			if (userNumber < secretNumber) {
@@ -18,7 +18,7 @@ public class GuessNumber {
 				if (userNumber + increment <= 100) {
 					userNumber += increment;
 				}
-				increment = (byte)(increment/2);
+				if (increment > 1) increment = (byte)(increment/2);
 			}
 		}
 		System.out.println("Вы угадали! > " + secretNumber);
