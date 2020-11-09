@@ -1,4 +1,4 @@
-public class Calc {
+public class Calculator {
 	public static void main(String[] args) {
 		int firstNum = 2;
 		char mathSign = '^';
@@ -16,7 +16,7 @@ public class Calc {
 		} else if (mathSign == '^') {
 			result = 1;
 			for (int i = 1; i <= secondNum; i++) {
-				result = result * firstNum;
+				result *= firstNum;
 			}
 		} else if (mathSign == '%') {
 			result = firstNum % secondNum;
