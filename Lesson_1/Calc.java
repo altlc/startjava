@@ -15,7 +15,7 @@ public class Calc {
 			result = firstNum / secondNum;
 		} else if (mathSign == '^') {
 			result = 1;
-			for (int i = 1; i <= secondNum; i++){
+			for (int i = 1; i <= secondNum; i++) {
 				result = result * firstNum;
 			}
 		} else if (mathSign == '%') {
