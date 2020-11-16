@@ -1,7 +1,7 @@
 public class GuessNumber {
 	public static void main(String[] args) {
-		byte secretNumber = 50;
-		byte userNumber = 4;
+		byte secretNumber = 34;
+		byte userNumber = 72;
 		byte increment = 50;
 
 		while (userNumber != secretNumber) {
