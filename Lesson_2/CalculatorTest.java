@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class CalculatorTest {
 	public static void main(String[] args) {
 		String continueWork;
+		Calculator myCalc = new Calculator();
+
 		do {
 			Scanner scan = new Scanner(System.in, "Cp866");
 			System.out.print("Введите первое число: ");
@@ -16,7 +18,6 @@ public class CalculatorTest {
 			int secondNumber = scan.nextInt();
 			scan.nextLine();
 
-			Calculator myCalc = new Calculator();
 			myCalc.setFirstNum(firstNumber);
 			myCalc.setSecondNum(secondNumber);
 			myCalc.setMathSign(mathSign);
