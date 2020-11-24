@@ -1,7 +1,7 @@
 public class WolfTest {
 	public static void main(String[] args) {
 		Wolf myWolf = new Wolf();
-		myWolf.setAge((byte)5);
+		myWolf.setAge((byte) 5);
 		myWolf.setName("Werewolf");
 		myWolf.setWeight(20.0f);
 		myWolf.setColor("grey");
