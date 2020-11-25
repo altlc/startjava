@@ -1,7 +1,7 @@
 public class Calculator {
 	private int firstNum;
 	private char mathSign;
-	private int secondNum ;
+	private int secondNum;
 	private int result = 0;
 
 	public void setFirstNum(int firstNum) {
@@ -16,7 +16,7 @@ public class Calculator {
 		this.mathSign = mathSign;
 	}
 
-	public int getResult() {
+	public int calculate() {
 		switch(mathSign) {
 			case '+' :
 				result = firstNum + secondNum;
@@ -40,7 +40,7 @@ public class Calculator {
 				result = firstNum % secondNum;
 				break;
 			default:
-				System.out.println("неподдерживаемая операция");
+				System.out.println("Неподдерживаемая операция!");
 		}
 		return result;
 	}

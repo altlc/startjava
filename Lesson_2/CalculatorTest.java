@@ -2,31 +2,28 @@ import java.util.Scanner;
 
 public class CalculatorTest {
 	public static void main(String[] args) {
-		String continueWork;
-		Calculator myCalc = new Calculator();
+		String oneMoreCalc;
+		Calculator calc = new Calculator();
 
 		do {
 			Scanner scan = new Scanner(System.in, "Cp866");
 			System.out.print("Введите первое число: ");
-			int firstNumber = scan.nextInt();
+			calc.setFirstNum(scan.nextInt());
 			scan.nextLine();
 
 			System.out.print("Введите знак математической операции: ");
-			char mathSign = scan.next().charAt(0);
+			calc.setMathSign(scan.next().charAt(0));
 
 			System.out.print("Введите второе число: ");
-			int secondNumber = scan.nextInt();
+			calc.setSecondNum(scan.nextInt());
 			scan.nextLine();
 
-			myCalc.setFirstNum(firstNumber);
-			myCalc.setSecondNum(secondNumber);
-			myCalc.setMathSign(mathSign);
-			System.out.println("Результат: " + myCalc.getResult());
+			System.out.println("Результат: " + calc.calculate());
 
 			do {
 				System.out.print("Хотите продолжить вычисления? [да/нет]: ");
-				continueWork = scan.nextLine();
-			} while (!continueWork.equals("да") && !continueWork.equals("нет"));
-		} while (continueWork.equals("да"));
+				oneMoreCalc = scan.nextLine();
+			} while (!oneMoreCalc.equals("да") && !oneMoreCalc.equals("нет"));
+		} while (oneMoreCalc.equals("да"));
 	}
 }
