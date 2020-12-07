@@ -18,7 +18,7 @@ public class GuessNumber {
 		scan = new Scanner(System.in, "Cp866");
 		secretNumber = random.nextInt(100);
 
-		while(true){
+		while(true) {
 			int userNumber = intputUserNumber(playerOne.getName());
 			playerOne.setNumber(userNumber);
 			if(checkNumber(userNumber)) {
