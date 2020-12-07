@@ -5,7 +5,6 @@ public class Wolf {
 	private byte age;
 	private String color;
 
-
 	public String getGender() {
 		return gender;
 	}

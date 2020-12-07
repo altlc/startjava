@@ -2,7 +2,7 @@ public class Calculator {
 	private int firstNum;
 	private char mathSign;
 	private int secondNum;
-	private int result = 0;
+	private int result;
 
 	public void setFirstNum(int firstNum) {
 		this.firstNum = firstNum;

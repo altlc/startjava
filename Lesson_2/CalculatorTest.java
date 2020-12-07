@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class CalculatorTest {
 	public static void main(String[] args) {
-		String oneMoreCalc;
+		String userAnswer;
 		Calculator calc = new Calculator();
 
 		do {
@@ -22,8 +22,8 @@ public class CalculatorTest {
 
 			do {
 				System.out.print("Хотите продолжить вычисления? [да/нет]: ");
-				oneMoreCalc = scan.nextLine();
-			} while (!oneMoreCalc.equals("да") && !oneMoreCalc.equals("нет"));
-		} while (oneMoreCalc.equals("да"));
+				userAnswer = scan.nextLine();
+			} while (!userAnswer.equals("да") && !userAnswer.equals("нет"));
+		} while (userAnswer.equals("да"));
 	}
 }

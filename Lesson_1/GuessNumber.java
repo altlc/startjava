@@ -24,4 +24,3 @@ public class GuessNumber {
 		System.out.println("Вы угадали! > " + secretNumber);
 	}
 }
-
