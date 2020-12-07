@@ -12,7 +12,7 @@ public class GuessNumberTest {
 
 		do {
 			GuessNumber game = new GuessNumber(playerOne, playerTwo);
-			game.Play();
+			game.play();
 
 			do {
 				System.out.print("Хотите продолжить игру? [да/нет]: ");
@@ -23,4 +23,3 @@ public class GuessNumberTest {
 		
 	}
 }
-

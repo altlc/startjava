@@ -18,7 +18,7 @@ public class JaegerTest {
 		chernoAlpha.shoot();
 		chernoAlpha.setModelName("Cherno Alpha Destroyed");
 		
-		System.out.println( gipsyDanger.getModelName() );
-		System.out.println( chernoAlpha.getModelName() );
+		System.out.println(gipsyDanger.getModelName());
+		System.out.println(chernoAlpha.getModelName());
 	}
 }

@@ -2,58 +2,55 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GuessNumber {
-	private byte secretNumber;
+	private int secretNumber;
 	private Player playerOne;
 	private Player playerTwo;
+	private Scanner scan;
 
 	public GuessNumber(Player playerOne, Player playerTwo) {
 		this.playerOne = playerOne;
 		this.playerTwo = playerTwo;
 	}
 
-	public void Play() {
-		byte currentPlayer;
+	public void play() {
 		Random random = new Random();
 
-		if(random.nextBoolean()){
-			currentPlayer = 1;
-		}else{
-			currentPlayer = 2;
+		scan = new Scanner(System.in, "Cp866");
+		secretNumber = random.nextInt(100);
+
+		while(true){
+			int userNumber = intputUserNumber(playerOne.getName());
+			playerOne.setNumber(userNumber);
+			if(checkNumber(userNumber)) {
+				System.out.println(playerOne.getName() + " угадал число!");
+				break;
+			}
+
+			userNumber = intputUserNumber(playerTwo.getName());
+			playerTwo.setNumber(userNumber);
+			if(checkNumber(userNumber)) {
+				System.out.println(playerTwo.getName() + " угадал число!");
+				break;
+			}
 		}
+	}
 
-		Scanner scan = new Scanner(System.in, "Cp866");
-		byte userNumber;
-		String currentPlayerName;
+	private int intputUserNumber(String userName) {
+		System.out.print(userName + " введите число: ");
+		int result = scan.nextInt();
+		scan.nextLine();
+		return result;
+	}
 
-		secretNumber = (byte)random.nextInt(100);
-
-		do {
-			if(currentPlayer == 1)
-			{
-				currentPlayerName = playerOne.getName();
-			} else {
-				currentPlayerName = playerTwo.getName();
-			}
-
-			System.out.print(currentPlayerName + " введите число: ");
-			userNumber = (byte)scan.nextInt();
-			scan.nextLine();
-
-			if (userNumber > secretNumber) {
-				System.out.println("Введенное вами число БОЛЬШЕ того, что загадал компьютер > " + userNumber);
-			} else if(userNumber < secretNumber) {
-				System.out.println("Введенное вами число МЕНЬШЕ того, что загадал компьютер > " + userNumber);
-			} else if(userNumber == secretNumber) {
-				System.out.println(currentPlayerName + " угадал число " + secretNumber);
-			}
-
-			if(currentPlayer == 1)
-			{
-				currentPlayer = 2;
-			} else {
-				currentPlayer = 1;
-			}
-		}while(userNumber != secretNumber);
+	private boolean checkNumber(int userNumber) {
+		if(userNumber > secretNumber) {
+			System.out.println("Введенное вами число БОЛЬШЕ того, что загадал компьютер > " + userNumber);
+			return false;
+		} else if(userNumber < secretNumber) {
+			System.out.println("Введенное вами число МЕНЬШЕ того, что загадал компьютер > " + userNumber);
+			return false;
+		} 
+		return true;
 	}
 
 }
