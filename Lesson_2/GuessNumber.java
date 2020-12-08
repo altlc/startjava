@@ -19,38 +19,35 @@ public class GuessNumber {
 		secretNumber = random.nextInt(100);
 
 		while(true) {
-			int userNumber = intputUserNumber(playerOne.getName());
-			playerOne.setNumber(userNumber);
-			if(checkNumber(userNumber)) {
+			intputNumber(playerOne);
+			if(checkNumber(playerOne.getNumber())) {
 				System.out.println(playerOne.getName() + " угадал число!");
 				break;
 			}
 
-			userNumber = intputUserNumber(playerTwo.getName());
-			playerTwo.setNumber(userNumber);
-			if(checkNumber(userNumber)) {
+			intputNumber(playerTwo);
+			if(checkNumber(playerTwo.getNumber())) {
 				System.out.println(playerTwo.getName() + " угадал число!");
 				break;
 			}
 		}
 	}
 
-	private int intputUserNumber(String userName) {
-		System.out.print(userName + " введите число: ");
-		int result = scan.nextInt();
+	private void intputNumber(Player player) {
+		System.out.print(player.getName() + " введите число: ");
+		player.setNumber(scan.nextInt());
 		scan.nextLine();
-		return result;
 	}
 
-	private boolean checkNumber(int userNumber) {
-		if(userNumber > secretNumber) {
-			System.out.println("Введенное вами число БОЛЬШЕ того, что загадал компьютер > " + userNumber);
-			return false;
-		} else if(userNumber < secretNumber) {
-			System.out.println("Введенное вами число МЕНЬШЕ того, что загадал компьютер > " + userNumber);
-			return false;
-		} 
-		return true;
+	private boolean checkNumber(int playerNumber) {
+		if(playerNumber > secretNumber) {
+			System.out.println("Введенное вами число БОЛЬШЕ того, что загадал компьютер > " + playerNumber);
+		} else if(playerNumber < secretNumber) {
+			System.out.println("Введенное вами число МЕНЬШЕ того, что загадал компьютер > " + playerNumber);
+		} else {
+			return true;
+		}
+		return false;
 	}
 
 }

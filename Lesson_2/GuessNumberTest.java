@@ -19,7 +19,5 @@ public class GuessNumberTest {
 				userAnswer = scan.nextLine();
 			} while (!"да".equals(userAnswer) && !"нет".equals(userAnswer));
 		} while ("да".equals(userAnswer));
-
-		
 	}
 }
