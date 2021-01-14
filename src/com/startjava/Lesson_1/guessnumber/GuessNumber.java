@@ -1,28 +1,28 @@
 package com.startjava.Lesson_1.guessnumber;
 
 public class GuessNumber {
-	public static void main(String[] args) {
-		byte secretNumber = 34;
-		byte userNumber = 72;
-		byte increment = 50;
+    public static void main(String[] args) {
+        byte secretNumber = 34;
+        byte userNumber = 72;
+        byte increment = 50;
 
-		while (userNumber != secretNumber) {
-			if (userNumber > secretNumber) {
-				System.out.println("Введенное вами число больше того, что загадал компьютер +++> " + userNumber);
-				if (userNumber - increment > 0) {
-					userNumber -= increment;
-				}
-				if (increment > 1) increment = (byte)(increment/2);
-			}
+        while (userNumber != secretNumber) {
+            if (userNumber > secretNumber) {
+                System.out.println("Введенное вами число больше того, что загадал компьютер +++> " + userNumber);
+                if (userNumber - increment > 0) {
+                    userNumber -= increment;
+                }
+                if (increment > 1) increment = (byte) (increment / 2);
+            }
 
-			if (userNumber < secretNumber) {
-				System.out.println("Введенное вами число меньше того, что загадал компьютер ---> " + userNumber);
-				if (userNumber + increment <= 100) {
-					userNumber += increment;
-				}
-				if (increment > 1) increment = (byte)(increment/2);
-			}
-		}
-		System.out.println("Вы угадали! > " + secretNumber);
-	}
+            if (userNumber < secretNumber) {
+                System.out.println("Введенное вами число меньше того, что загадал компьютер ---> " + userNumber);
+                if (userNumber + increment <= 100) {
+                    userNumber += increment;
+                }
+                if (increment > 1) increment = (byte) (increment / 2);
+            }
+        }
+        System.out.println("Вы угадали! > " + secretNumber);
+    }
 }
