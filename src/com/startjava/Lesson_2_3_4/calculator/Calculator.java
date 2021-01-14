@@ -1,4 +1,4 @@
-package com.startjava.Lesson_2_3.calculator;
+package com.startjava.Lesson_2_3_4.calculator;
 
 public class Calculator {
 	private int firstNum;
@@ -6,19 +6,12 @@ public class Calculator {
 	private int secondNum;
 	private int result;
 
-	public void setFirstNum(int firstNum) {
-		this.firstNum = firstNum;
-	}
+	public int calculate(String mathExpr) {
+		String[] parsedMathExpr = mathExpr.split(" ");
+		int firstNum = Integer.parseInt(parsedMathExpr[0]);
+		int secondNum = Integer.parseInt(parsedMathExpr[2]);
+		char mathSign = parsedMathExpr[1].charAt(0);
 
-	public void setSecondNum(int secondNum) {
-		this.secondNum = secondNum;
-	}
-
-	public void setMathSign(char mathSign) {
-		this.mathSign = mathSign;
-	}
-
-	public int calculate() {
 		switch(mathSign) {
 			case '+' :
 				result = firstNum + secondNum;
@@ -33,10 +26,7 @@ public class Calculator {
 				result = firstNum / secondNum;
 				break;
 			case '^' :
-				result = 1;
-				for (int i = 1; i <= secondNum; i++) {
-					result *= firstNum;
-				}
+				result = (int)Math.pow(firstNum, secondNum);
 				break;
 			case '%' :
 				result = firstNum % secondNum;
