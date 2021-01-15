@@ -14,26 +14,20 @@ public class Calculator {
 
         switch (mathSign) {
             case '+':
-                result = firstNum + secondNum;
-                break;
+                return firstNum + secondNum;
             case '-':
-                result = firstNum - secondNum;
-                break;
+                return firstNum - secondNum;
             case '*':
-                result = firstNum * secondNum;
-                break;
+                return firstNum * secondNum;
             case '/':
-                result = firstNum / secondNum;
-                break;
+                return firstNum / secondNum;
             case '^':
-                result = (int) Math.pow(firstNum, secondNum);
-                break;
+                return (int) Math.pow(firstNum, secondNum);
             case '%':
-                result = firstNum % secondNum;
-                break;
+                return firstNum % secondNum;
             default:
                 System.out.println("Неподдерживаемая операция!");
+                return 0;
         }
-        return result;
     }
 }

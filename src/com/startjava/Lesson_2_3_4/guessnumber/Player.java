@@ -4,8 +4,7 @@ import java.util.Arrays;
 
 public class Player {
     private String name;
-    private int number;
-    private int tryNumber;
+    private int tryNumber = 0;
     private int[] numbers = new int[10];
 
     public Player(String name) {
@@ -21,8 +20,8 @@ public class Player {
     }
 
     public void cleanNumbers() {
-        Arrays.fill(numbers, 1, tryNumber - 1, 0);
-        tryNumber = 1;
+        if(tryNumber > 0) Arrays.fill(numbers, 0, tryNumber - 1, 0);
+        tryNumber = 0;
     }
 
     public int[] getNumbers() {
@@ -30,12 +29,7 @@ public class Player {
     }
 
     public void setNumber(int number, int tryNumber) {
-        this.number = number;
         this.numbers[tryNumber - 1] = number;
         this.tryNumber = tryNumber;
-    }
-
-    public int getNumber() {
-        return number;
     }
 }
