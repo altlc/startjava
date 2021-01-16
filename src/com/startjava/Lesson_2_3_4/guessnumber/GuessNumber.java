@@ -8,37 +8,44 @@ public class GuessNumber {
     private Player playerOne;
     private Player playerTwo;
     private Scanner scan;
+    private int playerNumber;
 
     public GuessNumber(Player playerOne, Player playerTwo) {
         this.playerOne = playerOne;
         this.playerTwo = playerTwo;
+        scan = new Scanner(System.in);
     }
 
     public void play() {
         Random random = new Random();
-        playerOne.cleanNumbers();
-        playerTwo.cleanNumbers();
-        scan = new Scanner(System.in);
         secretNumber = random.nextInt(101);
 
         System.out.println("У вас 10 попыток");
 
         for(int i = 1; i <= 10; i++) {
-            if (inputNumber(playerOne,i)) break;
-            if (inputNumber(playerTwo,i)) break;
+            inputNumber(playerOne);
+            if (checkNumber(playerOne, i)) break;
+            inputNumber(playerTwo);
+            if (checkNumber(playerTwo, i)) break;
         }
 
         System.out.println("Введенные числа:");
         printNumbers(playerOne);
         printNumbers(playerTwo);
         System.out.println();
+
+        playerOne.cleanNumbers();
+        playerTwo.cleanNumbers();
     }
 
-    private boolean inputNumber(Player player, int tryNumber) {
+    private void inputNumber(Player player) {
         System.out.print(player.getName() + " введите число: ");
-        int playerNumber = scan.nextInt();
+        playerNumber = scan.nextInt();
         scan.nextLine();
-        player.setNumber(playerNumber, tryNumber);
+        player.setNumber(playerNumber);
+    }
+
+    private boolean checkNumber(Player player, int tryNumber) {
         if(playerNumber == secretNumber) {
             System.out.println("Игрок " + player.getName() + " угадал число " + playerNumber + " с " + tryNumber + " попытки");
             return true;
@@ -53,5 +60,4 @@ public class GuessNumber {
             System.out.print(number + " ");
         }
     }
-
 }

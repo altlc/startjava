@@ -28,8 +28,8 @@ public class Player {
         return Arrays.copyOf(numbers, tryNumber);
     }
 
-    public void setNumber(int number, int tryNumber) {
-        this.numbers[tryNumber - 1] = number;
-        this.tryNumber = tryNumber;
+    public void setNumber(int number) {
+        numbers[tryNumber] = number;
+        tryNumber++;
     }
 }
