@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Player {
     private String name;
-    private int tryNumber = 0;
+    private int tryNumber;
     private int[] numbers = new int[10];
 
     public Player(String name) {
